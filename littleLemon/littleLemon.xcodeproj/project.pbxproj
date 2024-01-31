@@ -13,6 +13,7 @@
 		BF591CB62B6AC90B00E4B327 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF591CB52B6AC90B00E4B327 /* Preview Assets.xcassets */; };
 		BF591CB82B6AC90B00E4B327 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF591CB72B6AC90B00E4B327 /* Persistence.swift */; };
 		BF591CBB2B6AC90B00E4B327 /* littleLemon.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF591CB92B6AC90B00E4B327 /* littleLemon.xcdatamodeld */; };
+		BF591CC22B6ACA3F00E4B327 /* Resturant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF591CC12B6ACA3F00E4B327 /* Resturant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		BF591CB52B6AC90B00E4B327 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BF591CB72B6AC90B00E4B327 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		BF591CBA2B6AC90B00E4B327 /* littleLemon.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = littleLemon.xcdatamodel; sourceTree = "<group>"; };
+		BF591CC12B6ACA3F00E4B327 /* Resturant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resturant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			children = (
 				BF591CAE2B6AC90900E4B327 /* littleLemonApp.swift */,
 				BF591CB02B6AC90900E4B327 /* ContentView.swift */,
+				BF591CC12B6ACA3F00E4B327 /* Resturant.swift */,
 				BF591CB22B6AC90B00E4B327 /* Assets.xcassets */,
 				BF591CB72B6AC90B00E4B327 /* Persistence.swift */,
 				BF591CB92B6AC90B00E4B327 /* littleLemon.xcdatamodeld */,
@@ -145,6 +148,7 @@
 			files = (
 				BF591CB82B6AC90B00E4B327 /* Persistence.swift in Sources */,
 				BF591CBB2B6AC90B00E4B327 /* littleLemon.xcdatamodeld in Sources */,
+				BF591CC22B6ACA3F00E4B327 /* Resturant.swift in Sources */,
 				BF591CB12B6AC90900E4B327 /* ContentView.swift in Sources */,
 				BF591CAF2B6AC90900E4B327 /* littleLemonApp.swift in Sources */,
 			);
