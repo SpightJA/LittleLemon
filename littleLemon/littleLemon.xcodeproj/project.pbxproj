@@ -14,6 +14,9 @@
 		BF591CB82B6AC90B00E4B327 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF591CB72B6AC90B00E4B327 /* Persistence.swift */; };
 		BF591CBB2B6AC90B00E4B327 /* littleLemon.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF591CB92B6AC90B00E4B327 /* littleLemon.xcdatamodeld */; };
 		BF591CC22B6ACA3F00E4B327 /* Resturant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF591CC12B6ACA3F00E4B327 /* Resturant.swift */; };
+		BF591CC42B6AF82B00E4B327 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF591CC32B6AF82B00E4B327 /* OnboardingView.swift */; };
+		BF591CC62B6B027200E4B327 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF591CC52B6B027200E4B327 /* HomeView.swift */; };
+		BF591CC82B6B02B200E4B327 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF591CC72B6B02B200E4B327 /* MenuView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +28,9 @@
 		BF591CB72B6AC90B00E4B327 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		BF591CBA2B6AC90B00E4B327 /* littleLemon.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = littleLemon.xcdatamodel; sourceTree = "<group>"; };
 		BF591CC12B6ACA3F00E4B327 /* Resturant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resturant.swift; sourceTree = "<group>"; };
+		BF591CC32B6AF82B00E4B327 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		BF591CC52B6B027200E4B327 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		BF591CC72B6B02B200E4B327 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +63,9 @@
 		BF591CAD2B6AC90900E4B327 /* littleLemon */ = {
 			isa = PBXGroup;
 			children = (
+				BF591CC72B6B02B200E4B327 /* MenuView.swift */,
+				BF591CC52B6B027200E4B327 /* HomeView.swift */,
+				BF591CC32B6AF82B00E4B327 /* OnboardingView.swift */,
 				BF591CAE2B6AC90900E4B327 /* littleLemonApp.swift */,
 				BF591CB02B6AC90900E4B327 /* ContentView.swift */,
 				BF591CC12B6ACA3F00E4B327 /* Resturant.swift */,
@@ -146,6 +155,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF591CC42B6AF82B00E4B327 /* OnboardingView.swift in Sources */,
+				BF591CC82B6B02B200E4B327 /* MenuView.swift in Sources */,
+				BF591CC62B6B027200E4B327 /* HomeView.swift in Sources */,
 				BF591CB82B6AC90B00E4B327 /* Persistence.swift in Sources */,
 				BF591CBB2B6AC90B00E4B327 /* littleLemon.xcdatamodeld in Sources */,
 				BF591CC22B6ACA3F00E4B327 /* Resturant.swift in Sources */,
