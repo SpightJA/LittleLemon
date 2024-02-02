@@ -9,13 +9,19 @@ import SwiftUI
 
 struct MenuView: View {
     @Environment(\.managedObjectContext) private var viewContext
+    @State var searchText = ""
+ 
+    
     var body: some View {
         VStack {
             Text("Little Lemon")
             Text("Chicago")
             Text("Your new favorite spot! ")
-
-            FetchedObjects() { (dishes: [Dish]) in
+            TextField("Search menu", text: $searchText)
+            
+            FetchedObjects(predicate: buildPredicate(),
+                           sortDescriptors: buildSortDescriptors())
+            { (dishes: [Dish]) in
                 List {
                     ForEach(dishes, id:\.self) { dish in
                         HStack{
@@ -46,10 +52,15 @@ struct MenuView: View {
         }
     }
     func buildPredicate() -> NSPredicate {
-        return NSPredicate()
+        if (searchText.isEmpty) {
+            return NSPredicate(value: true)
+        }
+    
+        return NSPredicate(format: "title CONTAINS[cd] %@", searchText)
     }
     func buildSortDescriptors() -> [NSSortDescriptor] {
-        return [NSSortDescriptor()]
+        
+        return [NSSortDescriptor(key: "title", ascending: true,selector:  #selector(NSString.localizedStandardCompare))]
     }
     
     func getMenuData() {
