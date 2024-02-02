@@ -8,31 +8,41 @@
 
 /* Begin PBXBuildFile section */
 		BF591CAF2B6AC90900E4B327 /* littleLemonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF591CAE2B6AC90900E4B327 /* littleLemonApp.swift */; };
-		BF591CB12B6AC90900E4B327 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF591CB02B6AC90900E4B327 /* ContentView.swift */; };
 		BF591CB32B6AC90B00E4B327 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF591CB22B6AC90B00E4B327 /* Assets.xcassets */; };
 		BF591CB62B6AC90B00E4B327 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF591CB52B6AC90B00E4B327 /* Preview Assets.xcassets */; };
-		BF591CB82B6AC90B00E4B327 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF591CB72B6AC90B00E4B327 /* Persistence.swift */; };
 		BF591CBB2B6AC90B00E4B327 /* littleLemon.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF591CB92B6AC90B00E4B327 /* littleLemon.xcdatamodeld */; };
 		BF591CC22B6ACA3F00E4B327 /* Resturant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF591CC12B6ACA3F00E4B327 /* Resturant.swift */; };
 		BF591CC42B6AF82B00E4B327 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF591CC32B6AF82B00E4B327 /* OnboardingView.swift */; };
 		BF591CC62B6B027200E4B327 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF591CC52B6B027200E4B327 /* HomeView.swift */; };
 		BF591CC82B6B02B200E4B327 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF591CC72B6B02B200E4B327 /* MenuView.swift */; };
 		BF591CCA2B6B0DC200E4B327 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF591CC92B6B0DC200E4B327 /* UserProfileView.swift */; };
+		BF591CE12B6B48DF00E4B327 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF591CDF2B6B48DF00E4B327 /* Persistence.swift */; };
+		BF591CE22B6B48DF00E4B327 /* FetchedObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF591CE02B6B48DF00E4B327 /* FetchedObjects.swift */; };
+		BF591CE42B6B491F00E4B327 /* MenuList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF591CE32B6B491F00E4B327 /* MenuList.swift */; };
+		BF591CE62B6B496600E4B327 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF591CE52B6B496600E4B327 /* MenuItem.swift */; };
+		BF591CE92B6B530C00E4B327 /* ExampleDatabase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF591CE72B6B530C00E4B327 /* ExampleDatabase.xcdatamodeld */; };
+		BF591CEC2B6B543A00E4B327 /* Dish+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF591CEA2B6B543A00E4B327 /* Dish+CoreDataClass.swift */; };
+		BF591CED2B6B543A00E4B327 /* Dish+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF591CEB2B6B543A00E4B327 /* Dish+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BF591CAB2B6AC90900E4B327 /* littleLemon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = littleLemon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF591CAE2B6AC90900E4B327 /* littleLemonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = littleLemonApp.swift; sourceTree = "<group>"; };
-		BF591CB02B6AC90900E4B327 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BF591CB22B6AC90B00E4B327 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF591CB52B6AC90B00E4B327 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		BF591CB72B6AC90B00E4B327 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		BF591CBA2B6AC90B00E4B327 /* littleLemon.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = littleLemon.xcdatamodel; sourceTree = "<group>"; };
 		BF591CC12B6ACA3F00E4B327 /* Resturant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resturant.swift; sourceTree = "<group>"; };
 		BF591CC32B6AF82B00E4B327 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		BF591CC52B6B027200E4B327 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		BF591CC72B6B02B200E4B327 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		BF591CC92B6B0DC200E4B327 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
+		BF591CDF2B6B48DF00E4B327 /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Persistence.swift; path = ../../../../Downloads/KrOCQU2CTpmu1REIfryAvg_ae0cd909bf5e4e7db7525f835ddd50e1_CoreDataSupport/Persistence.swift; sourceTree = "<group>"; };
+		BF591CE02B6B48DF00E4B327 /* FetchedObjects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchedObjects.swift; sourceTree = "<group>"; };
+		BF591CE32B6B491F00E4B327 /* MenuList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuList.swift; sourceTree = "<group>"; };
+		BF591CE52B6B496600E4B327 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		BF591CE82B6B530C00E4B327 /* ExampleDatabase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ExampleDatabase.xcdatamodel; sourceTree = "<group>"; };
+		BF591CEA2B6B543A00E4B327 /* Dish+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dish+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BF591CEB2B6B543A00E4B327 /* Dish+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dish+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +59,11 @@
 		BF591CA22B6AC90900E4B327 = {
 			isa = PBXGroup;
 			children = (
+				BF591CEA2B6B543A00E4B327 /* Dish+CoreDataClass.swift */,
+				BF591CEB2B6B543A00E4B327 /* Dish+CoreDataProperties.swift */,
+				BF591CE72B6B530C00E4B327 /* ExampleDatabase.xcdatamodeld */,
+				BF591CE52B6B496600E4B327 /* MenuItem.swift */,
+				BF591CE32B6B491F00E4B327 /* MenuList.swift */,
 				BF591CAD2B6AC90900E4B327 /* littleLemon */,
 				BF591CAC2B6AC90900E4B327 /* Products */,
 			);
@@ -69,13 +84,13 @@
 				BF591CC52B6B027200E4B327 /* HomeView.swift */,
 				BF591CC32B6AF82B00E4B327 /* OnboardingView.swift */,
 				BF591CAE2B6AC90900E4B327 /* littleLemonApp.swift */,
-				BF591CB02B6AC90900E4B327 /* ContentView.swift */,
 				BF591CC12B6ACA3F00E4B327 /* Resturant.swift */,
 				BF591CB22B6AC90B00E4B327 /* Assets.xcassets */,
-				BF591CB72B6AC90B00E4B327 /* Persistence.swift */,
+				BF591CE02B6B48DF00E4B327 /* FetchedObjects.swift */,
 				BF591CB92B6AC90B00E4B327 /* littleLemon.xcdatamodeld */,
 				BF591CB42B6AC90B00E4B327 /* Preview Content */,
 				BF591CC92B6B0DC200E4B327 /* UserProfileView.swift */,
+				BF591CDF2B6B48DF00E4B327 /* Persistence.swift */,
 			);
 			path = littleLemon;
 			sourceTree = "<group>";
@@ -160,13 +175,18 @@
 			files = (
 				BF591CC42B6AF82B00E4B327 /* OnboardingView.swift in Sources */,
 				BF591CC82B6B02B200E4B327 /* MenuView.swift in Sources */,
+				BF591CED2B6B543A00E4B327 /* Dish+CoreDataProperties.swift in Sources */,
 				BF591CC62B6B027200E4B327 /* HomeView.swift in Sources */,
-				BF591CB82B6AC90B00E4B327 /* Persistence.swift in Sources */,
 				BF591CBB2B6AC90B00E4B327 /* littleLemon.xcdatamodeld in Sources */,
 				BF591CC22B6ACA3F00E4B327 /* Resturant.swift in Sources */,
-				BF591CB12B6AC90900E4B327 /* ContentView.swift in Sources */,
 				BF591CAF2B6AC90900E4B327 /* littleLemonApp.swift in Sources */,
+				BF591CEC2B6B543A00E4B327 /* Dish+CoreDataClass.swift in Sources */,
 				BF591CCA2B6B0DC200E4B327 /* UserProfileView.swift in Sources */,
+				BF591CE22B6B48DF00E4B327 /* FetchedObjects.swift in Sources */,
+				BF591CE62B6B496600E4B327 /* MenuItem.swift in Sources */,
+				BF591CE12B6B48DF00E4B327 /* Persistence.swift in Sources */,
+				BF591CE42B6B491F00E4B327 /* MenuList.swift in Sources */,
+				BF591CE92B6B530C00E4B327 /* ExampleDatabase.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +401,16 @@
 			);
 			currentVersion = BF591CBA2B6AC90B00E4B327 /* littleLemon.xcdatamodel */;
 			path = littleLemon.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		BF591CE72B6B530C00E4B327 /* ExampleDatabase.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BF591CE82B6B530C00E4B327 /* ExampleDatabase.xcdatamodel */,
+			);
+			currentVersion = BF591CE82B6B530C00E4B327 /* ExampleDatabase.xcdatamodel */;
+			path = ExampleDatabase.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
