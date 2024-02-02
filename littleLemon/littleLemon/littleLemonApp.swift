@@ -15,6 +15,7 @@ struct littleLemonApp: App {
         WindowGroup {
             OnboardingView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            
         }
     }
 }
