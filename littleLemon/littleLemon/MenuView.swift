@@ -13,42 +13,89 @@ struct MenuView: View {
  
     
     var body: some View {
+        
         VStack {
-            Text("Little Lemon")
-            Text("Chicago")
-            Text("Your new favorite spot! ")
-            TextField("Search menu", text: $searchText)
-            
-            FetchedObjects(predicate: buildPredicate(),
-                           sortDescriptors: buildSortDescriptors())
-            { (dishes: [Dish]) in
-                List {
-                    ForEach(dishes, id:\.self) { dish in
-                        HStack{
-                            // change cards to nav links and change black boxes to actual photos
-                            Text(dish.title ?? "JON ")
-                            Spacer()
-                            let dishUrl = URL(string: dish.image!)
-                            AsyncImage(url: dishUrl){
-                                image in
-                                image.image?.resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                .frame(maxWidth: 100, maxHeight: 100)
-                            }
-                            .listRowInsets(EdgeInsets())
-
-                            
-                                
-                        }
-
+            NavigationHeaderView()
+            VStack (alignment: .leading){
+                Text("Little lemon")
+                    .foregroundStyle(Color(.primary2))
+                    .font(Font.custom("MarkaziText-Medium", size: 48))
+                    .padding(.leading, 10)
+                    
+                HStack {
+                    VStack(alignment: .leading){
+                        Text("Chicago")
+                            .foregroundStyle(Color(.highlight1))
+                            .font(Font.custom("MarkaziText-Regular", size: 28))
+                            .padding(.leading, 10)
+                            .padding(.top, -35)
+                            .padding(.bottom, 25)
+                        Text("We are a family owned Mediterranean resturant, focused on traditional recipes served with a modern twist.")
+                            .foregroundStyle(Color(.highlight1))
+                            .font(Font.custom("Karla Regular", size: 18))
+                            .padding(.leading, 10)
+//                            .padding(.bottom, 35 )
                     }
+                    
+                        
+                    Image(.hero)
+                        .resizable()
+                        .frame(width: 160,height: 170)
+                        .cornerRadius(25.0)
+                        .padding(.top, 0)
+                        
+                }
+
+                    TextField("Search menu", text: $searchText)
+                        .frame(width: 350, height: 35)
+                        .background(Color(.highlight1))
+                    
+                
+                .padding()
+                FetchedObjects(predicate: buildPredicate(),
+                               sortDescriptors: buildSortDescriptors())
+                { (dishes: [Dish]) in
+                    List {
+                        ForEach(dishes, id:\.self) { dish in
+                            HStack{
+                                // change cards to nav links and change black boxes to actual photos
+                                VStack(alignment: .leading){
+                                    Text("\(dish.title ?? "Loading...")")
+                                        .fontWeight(.bold)
+                                        .foregroundStyle(Color(.highlight2))
+                                        .font(Font.custom("Karla Bold", size: 18)).bold()
+                                    Text("\(dish.descrip ?? "")")
+                                        .font(Font.custom("Karla Regular", size: 14))
+                                        .foregroundStyle(Color(.highlight2))
+                                    Text("$\(dish.price ?? "5").99")
+                                        .font(Font.custom("Karla Regular", size: 14))
+                                        .foregroundStyle(Color(.highlight2))
+                                }
+                                Spacer()
+                                let dishUrl = URL(string: dish.image!)
+                                AsyncImage(url: dishUrl){
+                                    image in
+                                    image.image?.resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                    .frame(maxWidth: 100, maxHeight: 100)
+                                }
+                                .listRowInsets(EdgeInsets())
+
+                                
+                                    
+                            }
+
+                        }
+                    }
+
                 }
 
             }
-
-        }
-        .onAppear(){
-            getMenuData()
+            .background(Color(.primary1))
+            .onAppear(){
+                getMenuData()
+            }
+            
         }
     }
     func buildPredicate() -> NSPredicate {
@@ -78,6 +125,7 @@ struct MenuView: View {
                     newDish.image = item.image
                     newDish.price = item.price
                     newDish.title = item.title
+                    newDish.descrip = item.description
                     print(newDish)
                 })
                 try? viewContext.save()

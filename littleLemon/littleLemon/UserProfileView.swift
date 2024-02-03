@@ -12,19 +12,71 @@ struct UserProfileView: View {
     let lastName = UserDefaults.standard.string(forKey: "lastNameKey")
     let email = UserDefaults.standard.string(forKey: "emailKey")
     @Environment(\.presentationMode) var presentation
+    @State private var isOn1 = false
+    @State private var isOn2 = false
+    @State private var isOn3 = false
+    @State private var isOn4 = false
+//    @State private var profilepic = .profilepic
     
     var body: some View {
-        VStack {
+        VStack (){
+            NavigationHeaderView()
+            Spacer()
             Text("Personal information")
-            Image("profile-image-placeholder")
-            Text(firstName ?? " ")
-            Text(lastName ?? " ")
-            Text(email ?? " ")
-            Button("Logout") {
+                .fontWeight(.bold)
+            Image(.profilePic)
+            HStack{
+                
+                Button("Change"){
+//                    changeProfile()
+                }
+                .buttonStyle(.borderedProminent)
+                .tint(Color.primary1)
+                Button("Remove"){
+                    
+                    
+                }
+                .buttonStyle(.borderedProminent)
+                .tint(Color.primary1)
+            }
+            Text("\(firstName ?? " ")")
+            Text("\(lastName ?? " ")")
+            Text(" \(email ?? " ")")
+                .padding(.bottom, 50)
+            
+            VStack(alignment: .leading){
+
+                Text("Email Notifications")
+                    .fontWeight(.bold)
+                    
+                    Toggle(isOn: $isOn1) {
+                                Text("Order Statuses")
+                            }
+                    Toggle(isOn: $isOn2) {
+                                Text("Password changes")
+                            }
+                    Toggle(isOn: $isOn3) {
+                                Text("Special Offers")
+                            }
+                    Toggle(isOn: $isOn4) {
+                                Text("Newsletter")
+                            }
+            }.padding()
+            
+            Spacer()
+            Button(action:  {
                 UserDefaults.standard.setValue(false, forKey: kIsLoggedIn)
                 self.presentation.wrappedValue.dismiss()
+            }){
+                Text("Log out")
+                    .fontWeight(.bold)
+                    .foregroundStyle(Color.black)
+                    .frame(maxWidth: 300)
+                    
             }
-            Spacer()
+            .buttonStyle(.borderedProminent)
+            .tint(Color.primary2)
+
         }
     }
 }
