@@ -26,10 +26,80 @@ struct OnboardingView: View {
                 NavigationLink(destination: HomeView(), isActive: $isLoggedIn){
                     EmptyView()
                 }
+                Image(.logo).resizable()
+                    .frame(width: 200, height: 50).padding(.trailing, 10)
+                VStack (alignment: .leading){
+                    Text("Little lemon")
+                        .foregroundStyle(Color(.primary2))
+                        .font(Font.custom("MarkaziText-Medium", size: 48))
+                        .padding(.leading, 10)
+                        
+                    HStack {
+                        VStack(alignment: .leading){
+                            Text("Chicago")
+                                .foregroundStyle(Color(.highlight1))
+                                .font(Font.custom("MarkaziText-Regular", size: 28))
+                                .padding(.leading, 10)
+                                .padding(.top, -20)
+                                .padding(.bottom, 25)
+                            Text("We are a family owned Mediterranean resturant, focused on traditional recipes served with a modern twist.")
+                                .foregroundStyle(Color(.highlight1))
+                                .font(Font.custom("Karla Regular", size: 18))
+                                .padding(.leading, 10)
+                                .padding(.bottom, 30 )
+                        }
+                        
+                            
+                        Image(.hero)
+                            .resizable()
+                            .frame(width: 160,height: 170)
+                            .cornerRadius(25.0)
+                            .padding(.top, 0)
+                            .padding(.bottom, 30 )
+
+                    }
+
+                }
+                .background(Color(.primary1))
+                .frame(maxWidth: .infinity)
+                
+                
+                HStack{
+                    Text("First Name")
+                        .foregroundStyle(Color.gray)
+                    Spacer()
+                }.padding()
+                    
                 TextField("First Name:", text: $firstName)
+                    .textFieldStyle(.roundedBorder)
+                    .border(Color.gray, width: 2)
+                    .padding()
+                    .padding(.top, -35)
+                HStack{
+                    Text("Last Name*")
+                        .foregroundStyle(Color.gray)
+                    Spacer()
+                }.padding()
+                .padding(.top, -15)
+                
                 TextField("Last Name:", text: $lastName)
+                    .textFieldStyle(.roundedBorder)
+                    .border(Color.gray, width: 2)
+                    .padding()
+                    .padding(.top, -35)
+                HStack{
+                    Text("Email*")
+                        .foregroundStyle(Color.gray)
+                    Spacer()
+                }.padding()
+                .padding(.top, -15)
                 TextField("Email:", text: $email)
-                Button("Register") {
+                    .textFieldStyle(.roundedBorder)
+                    .border(Color.gray, width: 2)
+                    .padding()
+                    .padding(.top, -35)
+                
+                Button(action:  {
                     //IDEA - add a check to validate email address!
                     if (!firstName.isEmpty &&
                         !lastName.isEmpty &&
@@ -43,7 +113,15 @@ struct OnboardingView: View {
                     else{
                         
                     }
+                })
+                {
+                    Text("Register")
+                        .fontWeight(.bold)
+                        .foregroundStyle(Color.black)
                 }
+                .buttonStyle(.borderedProminent)
+                .tint(Color.primary2)
+                Spacer()
                 
             }
             .onAppear(){
