@@ -31,13 +31,16 @@ struct UserProfileView: View {
 //                    changeProfile()
                 }
                 .buttonStyle(.borderedProminent)
-                .tint(Color.primary1)
+                .tint(Color.primary2)
+                .foregroundStyle(.primary1)
                 Button("Remove"){
                     
                     
                 }
                 .buttonStyle(.borderedProminent)
-                .tint(Color.primary1)
+                .tint(Color.primary2)
+                .foregroundStyle(.primary1)
+                
             }
             Text("\(firstName ?? " ")")
             Text("\(lastName ?? " ")")
@@ -70,7 +73,7 @@ struct UserProfileView: View {
             }){
                 Text("Log out")
                     .fontWeight(.bold)
-                    .foregroundStyle(Color.black)
+                    .foregroundStyle(.primary1)
                     .frame(maxWidth: 300)
                     
             }

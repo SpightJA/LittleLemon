@@ -10,49 +10,75 @@ import SwiftUI
 struct MenuView: View {
     @Environment(\.managedObjectContext) private var viewContext
     @State var searchText = ""
- 
+    @State private var isSearching = false
+    @State private var startersIsEnabled = true
+    @State private var mainsIsEnabled = true
+    @State private var dessertsIsEnabled = true
+    @State private var drinksIsEnabled = true
     
     var body: some View {
         
         VStack {
             NavigationHeaderView()
-            VStack (alignment: .leading){
-                Text("Little lemon")
-                    .foregroundStyle(Color(.primary2))
-                    .font(Font.custom("MarkaziText-Medium", size: 48))
-                    .padding(.leading, 10)
-                    
-                HStack {
-                    VStack(alignment: .leading){
-                        Text("Chicago")
-                            .foregroundStyle(Color(.highlight1))
-                            .font(Font.custom("MarkaziText-Regular", size: 28))
-                            .padding(.leading, 10)
-                            .padding(.top, -35)
-                            .padding(.bottom, 25)
-                        Text("We are a family owned Mediterranean resturant, focused on traditional recipes served with a modern twist.")
-                            .foregroundStyle(Color(.highlight1))
-                            .font(Font.custom("Karla Regular", size: 18))
-                            .padding(.leading, 10)
-//                            .padding(.bottom, 35 )
-                    }
-                    
-                        
-                    Image(.hero)
-                        .resizable()
-                        .frame(width: 160,height: 170)
-                        .cornerRadius(25.0)
-                        .padding(.top, 0)
-                        
-                }
 
-                    TextField("Search menu", text: $searchText)
-                        .frame(width: 350, height: 35)
-                        .background(Color(.highlight1))
-                    
+            VStack{
+                HeroVIew()
                 
-                .padding()
-                FetchedObjects(predicate: buildPredicate(),
+                if (isSearching) {
+                    HStack {
+                        TextField("Search", text: $searchText, onEditingChanged: { editing in
+                            isSearching = editing
+                        })
+                        .textFieldStyle(.roundedBorder)
+                        
+                        Image(systemName: "xmark.circle.fill")
+                            .foregroundColor(.highlight1)
+                            .onTapGesture {
+                                withAnimation{
+                                    isSearching = false
+                                    searchText = ""
+                                }
+                            }
+                    }
+                    .padding()
+                } else {
+                    HStack {
+                        Image(systemName: "magnifyingglass")
+                            .imageScale(.large)
+                            .foregroundColor(.highlight1)
+                            .padding(.leading)
+                            .onTapGesture {
+                                withAnimation {
+                                    isSearching = true
+                                }
+                            }
+                        Spacer()
+                    }
+                    .padding()
+                }
+            }
+            .background(.primary1)
+                Text("Order for Delivery!")
+                    .foregroundColor(.highlight2)
+//                    .font(.regularTextLarge())
+                    .padding(.top)
+                    .padding(.leading)
+                    .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
+                
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 20) {
+                        Toggle("Stareters", isOn: $startersIsEnabled)
+                        Toggle("Mains", isOn: $mainsIsEnabled)
+                        Toggle("Desserts", isOn: $dessertsIsEnabled)
+                        Toggle("Drinks", isOn: $drinksIsEnabled)
+                    }
+                    .padding(.horizontal)
+                    .toggleStyle(CategoryToggleStyle())
+//                    .foregroundColor(.highlight2)
+
+                }
+                
+                    FetchedObjects(predicate: buildPredicate(),
                                sortDescriptors: buildSortDescriptors())
                 { (dishes: [Dish]) in
                     List {
@@ -90,8 +116,7 @@ struct MenuView: View {
 
                 }
 
-            }
-            .background(Color(.primary1))
+//            }
             .onAppear(){
                 getMenuData()
             }
@@ -133,6 +158,29 @@ struct MenuView: View {
         }
         task.resume()
     }
+    
+    
+    struct CategoryToggleStyle: ToggleStyle {
+        func makeBody(configuration: Configuration) -> some View {
+            Button {
+                configuration.isOn.toggle()
+            } label: {
+                HStack {
+                    configuration.label
+                }
+            }
+            .foregroundColor(Color.primary1)
+            .padding(5)
+            .background {
+                if configuration.isOn {
+                    Color.primary2
+                }
+            }
+            .cornerRadius(8)
+        }
+    }
+    
+    
 }
 
 #Preview {

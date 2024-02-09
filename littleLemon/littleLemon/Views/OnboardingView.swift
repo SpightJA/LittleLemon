@@ -37,7 +37,7 @@ struct OnboardingView: View {
                     HStack {
                         VStack(alignment: .leading){
                             Text("Chicago")
-                                .foregroundStyle(Color(.highlight1))
+                                .foregroundStyle(Color(.primary2))
                                 .font(Font.custom("MarkaziText-Regular", size: 28))
                                 .padding(.leading, 10)
                                 .padding(.top, -20)
@@ -117,7 +117,7 @@ struct OnboardingView: View {
                 {
                     Text("Register")
                         .fontWeight(.bold)
-                        .foregroundStyle(Color.black)
+                        .foregroundStyle(.primary1)
                 }
                 .buttonStyle(.borderedProminent)
                 .tint(Color.primary2)
