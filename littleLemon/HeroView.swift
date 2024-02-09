@@ -11,12 +11,12 @@ struct HeroVIew: View {
     var body: some View {
         HStack{
             VStack{
-            Text("Little lemon")
+            Text("Name Here ")
                     .foregroundStyle(.primary2)
                 .font(.largeTitleFont())
                 .frame(maxWidth: .infinity, alignment: .leading)
 
-                Text("Chicago")
+                Text("Location")
                     .foregroundStyle(Color(.primary2))
                     .font(.titleFont())
                     .frame(maxWidth: .infinity, alignment: .leading)

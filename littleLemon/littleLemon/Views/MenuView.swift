@@ -60,7 +60,6 @@ struct MenuView: View {
             .background(.primary1)
                 Text("Order for Delivery!")
                     .foregroundColor(.highlight2)
-//                    .font(.regularTextLarge())
                     .padding(.top)
                     .padding(.leading)
                     .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
@@ -74,7 +73,6 @@ struct MenuView: View {
                     }
                     .padding(.horizontal)
                     .toggleStyle(CategoryToggleStyle())
-//                    .foregroundColor(.highlight2)
 
                 }
                 
@@ -124,11 +122,15 @@ struct MenuView: View {
         }
     }
     func buildPredicate() -> NSPredicate {
-        if (searchText.isEmpty) {
-            return NSPredicate(value: true)
-        }
+        let search = searchText == "" ? NSPredicate(value: true) : NSPredicate(format: "title CONTAINS[cd] %@", searchText)
+        let starters = !startersIsEnabled ? NSPredicate(format: "category != %@", "starters") : NSPredicate(value: true)
+        let mains = !mainsIsEnabled ? NSPredicate(format: "category != %@", "mains") : NSPredicate(value: true)
+        let desserts = !dessertsIsEnabled ? NSPredicate(format: "category != %@", "desserts") : NSPredicate(value: true)
+        let drinks = !dessertsIsEnabled ? NSPredicate(format: "category != %@", "desserts") : NSPredicate(value: true)
+        
+        let compoundPredicate = NSCompoundPredicate(andPredicateWithSubpredicates: [search, starters, mains, desserts, drinks])
+        return compoundPredicate
     
-        return NSPredicate(format: "title CONTAINS[cd] %@", searchText)
     }
     func buildSortDescriptors() -> [NSSortDescriptor] {
         
@@ -151,6 +153,7 @@ struct MenuView: View {
                     newDish.price = item.price
                     newDish.title = item.title
                     newDish.descrip = item.description
+                    newDish.category = item.category
                     print(newDish)
                 })
                 try? viewContext.save()
