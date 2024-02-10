@@ -81,32 +81,9 @@ struct MenuView: View {
                 { (dishes: [Dish]) in
                     List {
                         ForEach(dishes, id:\.self) { dish in
-                            HStack{
-                                // change cards to nav links and change black boxes to actual photos
-                                VStack(alignment: .leading){
-                                    Text("\(dish.title ?? "Loading...")")
-                                        .fontWeight(.bold)
-                                        .foregroundStyle(Color(.highlight2))
-                                        .font(Font.custom("Karla Bold", size: 18)).bold()
-                                    Text("\(dish.descrip ?? "")")
-                                        .font(Font.custom("Karla Regular", size: 14))
-                                        .foregroundStyle(Color(.highlight2))
-                                    Text("$\(dish.price ?? "5").99")
-                                        .font(Font.custom("Karla Regular", size: 14))
-                                        .foregroundStyle(Color(.highlight2))
-                                }
-                                Spacer()
-                                let dishUrl = URL(string: dish.image!)
-                                AsyncImage(url: dishUrl){
-                                    image in
-                                    image.image?.resizable()
-                                        .aspectRatio(contentMode: .fit)
-                                    .frame(maxWidth: 100, maxHeight: 100)
-                                }
-                                .listRowInsets(EdgeInsets())
-
-                                
-                                    
+                            let myString = "556"
+                            let myFloat = (myString as NSString).doubleValue;            NavigationLink(destination: DishDetailView(dish: dish, total: 9.9, increment: 9.9)) {
+                                DishListView(dish: dish)
                             }
 
                         }
@@ -114,7 +91,6 @@ struct MenuView: View {
 
                 }
 
-//            }
             .onAppear(){
                 getMenuData()
             }

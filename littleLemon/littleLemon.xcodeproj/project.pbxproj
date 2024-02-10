@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF09F9922B76D14300325BA8 /* DishDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF09F9912B76D14300325BA8 /* DishDetailView.swift */; };
+		BF09F9982B76E97F00325BA8 /* DishListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF09F9972B76E97F00325BA8 /* DishListView.swift */; };
 		BF591CAF2B6AC90900E4B327 /* littleLemonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF591CAE2B6AC90900E4B327 /* littleLemonApp.swift */; };
 		BF591CB32B6AC90B00E4B327 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF591CB22B6AC90B00E4B327 /* Assets.xcassets */; };
 		BF591CB62B6AC90B00E4B327 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF591CB52B6AC90B00E4B327 /* Preview Assets.xcassets */; };
@@ -32,6 +34,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF09F9912B76D14300325BA8 /* DishDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishDetailView.swift; sourceTree = "<group>"; };
+		BF09F9972B76E97F00325BA8 /* DishListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishListView.swift; sourceTree = "<group>"; };
 		BF591CAB2B6AC90900E4B327 /* littleLemon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = littleLemon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF591CAE2B6AC90900E4B327 /* littleLemonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = littleLemonApp.swift; sourceTree = "<group>"; };
 		BF591CB22B6AC90B00E4B327 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -141,6 +145,8 @@
 				BF591CC72B6B02B200E4B327 /* MenuView.swift */,
 				BF591CC32B6AF82B00E4B327 /* OnboardingView.swift */,
 				BF591CC52B6B027200E4B327 /* HomeView.swift */,
+				BF09F9912B76D14300325BA8 /* DishDetailView.swift */,
+				BF09F9972B76E97F00325BA8 /* DishListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -249,6 +255,7 @@
 				BF591CC42B6AF82B00E4B327 /* OnboardingView.swift in Sources */,
 				BFBF619A2B6E0D6F0084F672 /* HeroView.swift in Sources */,
 				BFBF619F2B6E11190084F672 /* Font+Extensions.swift in Sources */,
+				BF09F9922B76D14300325BA8 /* DishDetailView.swift in Sources */,
 				BF591CC82B6B02B200E4B327 /* MenuView.swift in Sources */,
 				BF591CED2B6B543A00E4B327 /* Dish+CoreDataProperties.swift in Sources */,
 				BF591CC62B6B027200E4B327 /* HomeView.swift in Sources */,
@@ -259,6 +266,7 @@
 				BFBF618A2B6DEB970084F672 /* NavigationHeaderView.swift in Sources */,
 				BF591CE22B6B48DF00E4B327 /* FetchedObjects.swift in Sources */,
 				BF591CE62B6B496600E4B327 /* MenuItem.swift in Sources */,
+				BF09F9982B76E97F00325BA8 /* DishListView.swift in Sources */,
 				BFBF61A02B6E11190084F672 /* Color+Extensions.swift in Sources */,
 				BF591CE12B6B48DF00E4B327 /* Persistence.swift in Sources */,
 				BF591CE42B6B491F00E4B327 /* MenuList.swift in Sources */,
