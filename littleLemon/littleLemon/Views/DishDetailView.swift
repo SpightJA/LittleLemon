@@ -33,7 +33,7 @@ struct DishDetailView: View {
                 ProgressView()
             }
             .clipShape(Rectangle())
-            .frame(minHeight: 150)
+            .frame(minHeight: 100)
         }
         VStack{
             
@@ -64,11 +64,11 @@ struct DishDetailView: View {
                 .tint(Color.primary2)
                 Spacer(minLength: 20)
             }
-            Text("$\(dish.price ?? "")")
-                .font(Font.custom("Karla Regular", size: 14))
-                .foregroundColor(.primaryColorDarkGray)
-                .monospaced()
-            Spacer()
+//            Text("$\(dish.price ?? "")")
+//                .font(Font.custom("Karla Regular", size: 14))
+//                .foregroundColor(.primaryColorDarkGray)
+//                .monospaced()
+//            Spacer()
             HStack{
                 Text("Add").bold().padding()
                 Spacer()

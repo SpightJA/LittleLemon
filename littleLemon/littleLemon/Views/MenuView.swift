@@ -81,8 +81,8 @@ struct MenuView: View {
                 { (dishes: [Dish]) in
                     List {
                         ForEach(dishes, id:\.self) { dish in
-                            let myString = "556"
-                            let myFloat = (myString as NSString).doubleValue;            NavigationLink(destination: DishDetailView(dish: dish, total: 9.9, increment: 9.9)) {
+//                            let myString = "556"
+                            let myFloat = (dish.price! as NSString).doubleValue;            NavigationLink(destination: DishDetailView(dish: dish, total: myFloat, increment: myFloat)) {
                                 DishListView(dish: dish)
                             }
 
