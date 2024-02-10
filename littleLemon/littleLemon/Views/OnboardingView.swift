@@ -29,15 +29,15 @@ struct OnboardingView: View {
                 Image(.logo).resizable()
                     .frame(width: 200, height: 50).padding(.trailing, 10)
                 VStack (alignment: .leading){
-                    Text("Little lemon")
+                    Text("Name here")
                         .foregroundStyle(Color(.primary2))
                         .font(Font.custom("MarkaziText-Medium", size: 48))
                         .padding(.leading, 10)
                         
                     HStack {
                         VStack(alignment: .leading){
-                            Text("Chicago")
-                                .foregroundStyle(Color(.highlight1))
+                            Text("Location")
+                                .foregroundStyle(Color(.primary2))
                                 .font(Font.custom("MarkaziText-Regular", size: 28))
                                 .padding(.leading, 10)
                                 .padding(.top, -20)
@@ -117,7 +117,7 @@ struct OnboardingView: View {
                 {
                     Text("Register")
                         .fontWeight(.bold)
-                        .foregroundStyle(Color.black)
+                        .foregroundStyle(.primary1)
                 }
                 .buttonStyle(.borderedProminent)
                 .tint(Color.primary2)
