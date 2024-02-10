@@ -26,8 +26,8 @@ struct OnboardingView: View {
                 NavigationLink(destination: HomeView(), isActive: $isLoggedIn){
                     EmptyView()
                 }
-                Image(.logo).resizable()
-                    .frame(width: 200, height: 50).padding(.trailing, 10)
+                Image(.logoPH).resizable()
+                    .frame(width: 80, height: 80).padding(.trailing, 10)
                 VStack (alignment: .leading){
                     Text("Name here")
                         .foregroundStyle(Color(.primary2))
