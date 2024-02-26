@@ -25,6 +25,7 @@ struct DishDetailView: View {
 
         VStack{
             NavigationHeaderView()
+                .frame(height: 50)
             AsyncImage(url: URL(string: dish.image ?? "")) { image in
                 image
                     .resizable()
