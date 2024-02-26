@@ -16,12 +16,15 @@ struct UserProfileView: View {
     @State private var isOn2 = false
     @State private var isOn3 = false
     @State private var isOn4 = false
+    @EnvironmentObject var cartMonitor : CartMonitor
     
     var body: some View {
         VStack (){
+            NavigationHeaderView()
+                .frame(height: 50)
           
-            Image(.logoPH).resizable()
-                .frame(width: 50, height: 50, alignment: .center)
+//            Image(.logoPH).resizable()
+//                .frame(width: 50, height: 50, alignment: .center)
             Spacer()
             Text("Personal information")
                 .fontWeight(.bold)
@@ -87,4 +90,5 @@ struct UserProfileView: View {
 
 #Preview {
     UserProfileView()
+        .environmentObject(CartMonitor())
 }

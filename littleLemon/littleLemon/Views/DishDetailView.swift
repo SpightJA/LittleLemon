@@ -20,7 +20,7 @@ struct DishDetailView: View {
     @State var val : Double  = 0.0
     @State var count = 1
     let increment : Double
-    
+    @EnvironmentObject var cartMonitor : CartMonitor
     var body: some View {
 
         VStack{
@@ -168,7 +168,7 @@ struct DishDetailView: View {
             }
             Spacer()
             Button(action:  {
-  
+                cartMonitor.addToCart(dish: dish)
             }){
                 Text("Add for \(total , specifier: "%.2f")")
                     .fontWeight(.bold)
@@ -206,4 +206,5 @@ struct DishDetailView: View {
 
 #Preview {
     DishDetailView(dish: PersistenceController.getExampleDish(), total: 10.00, increment: 10.00)
+        .environmentObject(CartMonitor())
 }

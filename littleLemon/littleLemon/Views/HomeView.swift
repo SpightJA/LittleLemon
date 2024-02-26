@@ -10,27 +10,35 @@ import SwiftUI
 struct HomeView: View {
     let persistence = PersistenceController.shared
     @StateObject var model = Model()
-
+    @StateObject var cartMonitor = CartMonitor()
+    
     var body: some View {
         TabView(selection: $model.tabViewSelectedIndex) {
-            MenuView().tabItem {
+            MenuView()
+                .environmentObject(cartMonitor)
+                .tabItem {
                 if !model.displayingReservationForm {
                 Label("Menu", systemImage: "list.dash")
             }
             }.tag(1).environment(\.managedObjectContext, persistence.container.viewContext)
                       
-            LocationsView().tabItem {
+            LocationsView()
+                .environmentObject(cartMonitor)
+                .tabItem {
                 if !model.displayingReservationForm {
                     Label("Locations", systemImage: "fork.knife")
                 }
             }.tag(2)
             
-            ReservationView().tabItem {
+            ReservationView()
+                .tabItem {
                 if !model.displayingReservationForm {
                     Label("Reservations", systemImage: "calendar")
                 }
             }.tag(3)
-            UserProfileView().tabItem {
+            UserProfileView()
+                .environmentObject(cartMonitor)
+                .tabItem {
                 if !model.displayingReservationForm {
                 Label("Profile", systemImage: "square.and.pencil").tint(.red)
             }
@@ -50,4 +58,5 @@ struct HomeView: View {
 
 #Preview {
     HomeView()
+        
 }

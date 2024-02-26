@@ -8,33 +8,37 @@
 import SwiftUI
 
 struct NavigationHeaderView: View {
+    @EnvironmentObject var cartMonitor : CartMonitor
+    
     var body: some View {
         NavigationView {
         HStack() {
-            Spacer()
+//            Spacer()
             Image(.profilePic).resizable()
-                .frame(width: 50, height: 50, alignment: .center)
-//                .padding(.trailing, 70)
+                .frame(width: 50, height: 50, alignment: .leading)
+                .padding(.leading, 30)
 
             
             Spacer()
             Image(.logoPH).resizable()
-                .frame(width: 50, height: 50, alignment: .center)
-                .padding(.trailing, 70)
-                .padding(.leading, 70)
+                .frame(width: 50, height: 50, alignment: .leading)
+                .padding(.trailing, 5)
+                .padding(.leading, 0)
             
             Spacer()
-            NavigationLink(destination:UserProfileView() ) {
-                Image(systemName: "cart.circle.fill").resizable()
-                    .frame(width: 50, height: 50)
+            NavigationLink(destination:CartView() ) {
+                CartButtonView(numOfItems: cartMonitor.dishes.count)
+
                     .foregroundColor(.primary1)
-//                    .padding(.leading, 20)
+//                    .padding(.leading, 70)
+                    .padding(.trailing, 50)
                 
             }
-            Spacer()
+//            Spacer()
             
             
         }
+//        .frame(height: 50)
 
         }
     }
@@ -42,4 +46,5 @@ struct NavigationHeaderView: View {
 
 #Preview {
     NavigationHeaderView()
+        .environmentObject(CartMonitor())
 }

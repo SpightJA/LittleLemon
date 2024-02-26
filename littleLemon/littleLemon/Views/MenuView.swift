@@ -16,12 +16,14 @@ struct MenuView: View {
     @State private var dessertsIsEnabled = true
     @State private var drinksIsEnabled = true
 //    @Binding  var isLoggedOn: Bool
+    @EnvironmentObject var cartMonitor : CartMonitor
     
     var body: some View {
         NavigationStack {
         VStack (alignment: .center){
 
             NavigationHeaderView()
+                .environmentObject(cartMonitor)
                 .frame(height: 50)
             VStack{
                 HeroVIew()
@@ -84,7 +86,7 @@ struct MenuView: View {
                 List {
                     ForEach(dishes, id:\.self) { dish in
                         //                            let myString = "556"
-                        let myFloat = (dish.price! as NSString).doubleValue;           NavigationLink(destination: DishDetailView(dish: dish, total: myFloat, increment: myFloat)) {
+                        let myFloat = (dish.price! as NSString).doubleValue;           NavigationLink(destination: DishDetailView(dish: dish, total: myFloat, increment: myFloat).environmentObject(cartMonitor)) {
                             DishListView(dish: dish)
                         }
                         
@@ -168,4 +170,5 @@ struct MenuView: View {
 
 #Preview {
     MenuView()
+        .environmentObject(CartMonitor())
 }
