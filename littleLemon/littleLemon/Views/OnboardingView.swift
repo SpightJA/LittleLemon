@@ -20,14 +20,14 @@ struct OnboardingView: View {
     @State var isLoggedIn = false
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
 
                 NavigationLink(destination: HomeView(), isActive: $isLoggedIn){
                     EmptyView()
                 }
-                Image(.logo).resizable()
-                    .frame(width: 200, height: 50).padding(.trailing, 10)
+                Image(.logoPH).resizable()
+                    .frame(width: 80, height: 80).padding(.trailing, 10)
                 VStack (alignment: .leading){
                     Text("Name here")
                         .foregroundStyle(Color(.primary2))
@@ -100,15 +100,16 @@ struct OnboardingView: View {
                     .padding(.top, -35)
                 
                 Button(action:  {
-                    //IDEA - add a check to validate email address!
-                    if (!firstName.isEmpty &&
-                        !lastName.isEmpty &&
-                        !email.isEmpty ){
+                    //IDEA - add error messages for invalid fields
+                    if (Validation().isValid(name: firstName) &&
+                        Validation().isValid(name: lastName) &&
+                        Validation().isValid(email: email)){
                         UserDefaults.standard.set(firstName, forKey: kFirstName)
                         UserDefaults.standard.set(lastName, forKey: kLastName)
                         UserDefaults.standard.set(email, forKey: kEmail)
                         isLoggedIn = true
                         UserDefaults.standard.setValue(true, forKey: kIsLoggedIn)
+                        
                     }
                     else{
                         
@@ -124,13 +125,9 @@ struct OnboardingView: View {
                 Spacer()
                 
             }
-            .onAppear(){
-                if(UserDefaults.standard.bool(forKey: kIsLoggedIn)){
-                    isLoggedIn = true
-                }
-            }
         }
     }
+    
 }
 
 #Preview {

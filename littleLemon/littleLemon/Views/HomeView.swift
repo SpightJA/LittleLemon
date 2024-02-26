@@ -9,16 +9,54 @@ import SwiftUI
 
 struct HomeView: View {
     let persistence = PersistenceController.shared
+    @StateObject var model = Model()
+    @StateObject var cartMonitor = CartMonitor()
+    
     var body: some View {
-        TabView(selection: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Selection@*/.constant(1)/*@END_MENU_TOKEN@*/) {
-            MenuView().tabItem { Label("Menu", systemImage: "list.dash") }.tag(1).environment(\.managedObjectContext, persistence.container.viewContext)
-            UserProfileView().tabItem { Label("Profile", systemImage: "square.and.pencil").tint(.red) }.tag(2)
+        TabView(selection: $model.tabViewSelectedIndex) {
+            MenuView()
+                .environmentObject(cartMonitor)
+                .tabItem {
+                if !model.displayingReservationForm {
+                Label("Menu", systemImage: "list.dash")
+            }
+            }.tag(1).environment(\.managedObjectContext, persistence.container.viewContext)
+                      
+            LocationsView()
+                .environmentObject(cartMonitor)
+                .tabItem {
+                if !model.displayingReservationForm {
+                    Label("Locations", systemImage: "fork.knife")
+                }
+            }.tag(2)
+            
+            ReservationView()
+                .tabItem {
+                if !model.displayingReservationForm {
+                    Label("Reservations", systemImage: "calendar")
+                }
+            }.tag(3)
+            UserProfileView()
+                .environmentObject(cartMonitor)
+                .tabItem {
+                if !model.displayingReservationForm {
+                Label("Profile", systemImage: "square.and.pencil").tint(.red)
+            }
+                
+            }.tag(4)
+            
+            
+            
         }
-//        .toolbarBackground(.red, for: .tabBar)
+        .environmentObject(model)
         .navigationBarBackButtonHidden(true)
+        .onAppear(){
+            print(UserDefaults.standard.bool(forKey: kIsLoggedIn))
+        }
     }
 }
 
 #Preview {
     HomeView()
+        
 }

@@ -16,11 +16,15 @@ struct UserProfileView: View {
     @State private var isOn2 = false
     @State private var isOn3 = false
     @State private var isOn4 = false
-//    @State private var profilepic = .profilepic
+    @EnvironmentObject var cartMonitor : CartMonitor
     
     var body: some View {
         VStack (){
             NavigationHeaderView()
+                .frame(height: 50)
+          
+//            Image(.logoPH).resizable()
+//                .frame(width: 50, height: 50, alignment: .center)
             Spacer()
             Text("Personal information")
                 .fontWeight(.bold)
@@ -28,7 +32,6 @@ struct UserProfileView: View {
             HStack{
                 
                 Button("Change"){
-//                    changeProfile()
                 }
                 .buttonStyle(.borderedProminent)
                 .tint(Color.primary2)
@@ -70,6 +73,7 @@ struct UserProfileView: View {
             Button(action:  {
                 UserDefaults.standard.setValue(false, forKey: kIsLoggedIn)
                 self.presentation.wrappedValue.dismiss()
+                
             }){
                 Text("Log out")
                     .fontWeight(.bold)
@@ -86,4 +90,5 @@ struct UserProfileView: View {
 
 #Preview {
     UserProfileView()
+        .environmentObject(CartMonitor())
 }

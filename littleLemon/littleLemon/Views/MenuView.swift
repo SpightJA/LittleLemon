@@ -15,12 +15,16 @@ struct MenuView: View {
     @State private var mainsIsEnabled = true
     @State private var dessertsIsEnabled = true
     @State private var drinksIsEnabled = true
+//    @Binding  var isLoggedOn: Bool
+    @EnvironmentObject var cartMonitor : CartMonitor
     
     var body: some View {
-        
-        VStack {
-            NavigationHeaderView()
+        NavigationStack {
+        VStack (alignment: .center){
 
+            NavigationHeaderView()
+                .environmentObject(cartMonitor)
+                .frame(height: 50)
             VStack{
                 HeroVIew()
                 
@@ -58,44 +62,46 @@ struct MenuView: View {
                 }
             }
             .background(.primary1)
-                Text("Order for Delivery!")
-                    .foregroundColor(.highlight2)
-                    .padding(.top)
-                    .padding(.leading)
-                    .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
-                
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack(spacing: 20) {
-                        Toggle("Stareters", isOn: $startersIsEnabled)
-                        Toggle("Mains", isOn: $mainsIsEnabled)
-                        Toggle("Desserts", isOn: $dessertsIsEnabled)
-                        Toggle("Drinks", isOn: $drinksIsEnabled)
-                    }
-                    .padding(.horizontal)
-                    .toggleStyle(CategoryToggleStyle())
-
+            Text("Order for Delivery!")
+                .foregroundColor(.highlight2)
+                .padding(.top)
+                .padding(.leading)
+                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
+            
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 20) {
+                    Toggle("Stareters", isOn: $startersIsEnabled)
+                    Toggle("Mains", isOn: $mainsIsEnabled)
+                    Toggle("Desserts", isOn: $dessertsIsEnabled)
+                    Toggle("Drinks", isOn: $drinksIsEnabled)
                 }
+                .padding(.horizontal)
+                .toggleStyle(CategoryToggleStyle())
                 
-                    FetchedObjects(predicate: buildPredicate(),
-                               sortDescriptors: buildSortDescriptors())
-                { (dishes: [Dish]) in
-                    List {
-                        ForEach(dishes, id:\.self) { dish in
-                            let myString = "556"
-                            let myFloat = (myString as NSString).doubleValue;            NavigationLink(destination: DishDetailView(dish: dish, total: 9.9, increment: 9.9)) {
-                                DishListView(dish: dish)
-                            }
-
+            }
+            
+            FetchedObjects(predicate: buildPredicate(),
+                           sortDescriptors: buildSortDescriptors())
+            { (dishes: [Dish]) in
+                List {
+                    ForEach(dishes, id:\.self) { dish in
+                        //                            let myString = "556"
+                        let myFloat = (dish.price! as NSString).doubleValue;           NavigationLink(destination: DishDetailView(dish: dish, total: myFloat, increment: myFloat).environmentObject(cartMonitor)) {
+                            DishListView(dish: dish)
                         }
+                        
                     }
-
                 }
-
+                
+            }
+            
             .onAppear(){
                 getMenuData()
+
             }
             
         }
+    }
     }
     func buildPredicate() -> NSPredicate {
         let search = searchText == "" ? NSPredicate(value: true) : NSPredicate(format: "title CONTAINS[cd] %@", searchText)
@@ -164,4 +170,5 @@ struct MenuView: View {
 
 #Preview {
     MenuView()
+        .environmentObject(CartMonitor())
 }

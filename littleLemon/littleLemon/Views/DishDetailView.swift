@@ -20,11 +20,12 @@ struct DishDetailView: View {
     @State var val : Double  = 0.0
     @State var count = 1
     let increment : Double
-    
+    @EnvironmentObject var cartMonitor : CartMonitor
     var body: some View {
 
         VStack{
             NavigationHeaderView()
+                .frame(height: 50)
             AsyncImage(url: URL(string: dish.image ?? "")) { image in
                 image
                     .resizable()
@@ -33,7 +34,7 @@ struct DishDetailView: View {
                 ProgressView()
             }
             .clipShape(Rectangle())
-            .frame(minHeight: 150)
+            .frame(minHeight: 100)
         }
         VStack{
             
@@ -64,11 +65,11 @@ struct DishDetailView: View {
                 .tint(Color.primary2)
                 Spacer(minLength: 20)
             }
-            Text("$\(dish.price ?? "")")
-                .font(Font.custom("Karla Regular", size: 14))
-                .foregroundColor(.primaryColorDarkGray)
-                .monospaced()
-            Spacer()
+//            Text("$\(dish.price ?? "")")
+//                .font(Font.custom("Karla Regular", size: 14))
+//                .foregroundColor(.primaryColorDarkGray)
+//                .monospaced()
+//            Spacer()
             HStack{
                 Text("Add").bold().padding()
                 Spacer()
@@ -167,7 +168,7 @@ struct DishDetailView: View {
             }
             Spacer()
             Button(action:  {
-  
+                cartMonitor.addToCart(dish: dish)
             }){
                 Text("Add for \(total , specifier: "%.2f")")
                     .fontWeight(.bold)
@@ -205,4 +206,5 @@ struct DishDetailView: View {
 
 #Preview {
     DishDetailView(dish: PersistenceController.getExampleDish(), total: 10.00, increment: 10.00)
+        .environmentObject(CartMonitor())
 }

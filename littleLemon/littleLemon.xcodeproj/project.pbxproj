@@ -9,6 +9,17 @@
 /* Begin PBXBuildFile section */
 		BF09F9922B76D14300325BA8 /* DishDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF09F9912B76D14300325BA8 /* DishDetailView.swift */; };
 		BF09F9982B76E97F00325BA8 /* DishListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF09F9972B76E97F00325BA8 /* DishListView.swift */; };
+		BF2662A22B8C514A00D51699 /* CartButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2662A12B8C514A00D51699 /* CartButtonView.swift */; };
+		BF2662A42B8C559A00D51699 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2662A32B8C559A00D51699 /* CartView.swift */; };
+		BF2662A62B8CC9A100D51699 /* CartMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2662A52B8CC9A100D51699 /* CartMonitor.swift */; };
+		BF2662A82B8CF1CF00D51699 /* OrderRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2662A72B8CF1CF00D51699 /* OrderRowView.swift */; };
+		BF590DE32B8A99C2005770A7 /* LocationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF590DE22B8A99C2005770A7 /* LocationsView.swift */; };
+		BF590DE52B8A9A23005770A7 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF590DE42B8A9A23005770A7 /* Model.swift */; };
+		BF590DE92B8A9AA3005770A7 /* RestaurantLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF590DE82B8A9AA3005770A7 /* RestaurantLocation.swift */; };
+		BF590DF12B8A9BB0005770A7 /* RestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF590DF02B8A9BB0005770A7 /* RestaurantView.swift */; };
+		BF590DF72B8A9DC6005770A7 /* Reservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF590DF62B8A9DC6005770A7 /* Reservation.swift */; };
+		BF590DF92B8A9E0A005770A7 /* ReservationForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF590DF82B8A9E0A005770A7 /* ReservationForm.swift */; };
+		BF590DFB2B8A9E36005770A7 /* ReservationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF590DFA2B8A9E36005770A7 /* ReservationView.swift */; };
 		BF591CAF2B6AC90900E4B327 /* littleLemonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF591CAE2B6AC90900E4B327 /* littleLemonApp.swift */; };
 		BF591CB32B6AC90B00E4B327 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF591CB22B6AC90B00E4B327 /* Assets.xcassets */; };
 		BF591CB62B6AC90B00E4B327 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF591CB52B6AC90B00E4B327 /* Preview Assets.xcassets */; };
@@ -24,6 +35,7 @@
 		BF591CE92B6B530C00E4B327 /* ExampleDatabase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF591CE72B6B530C00E4B327 /* ExampleDatabase.xcdatamodeld */; };
 		BF591CEC2B6B543A00E4B327 /* Dish+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF591CEA2B6B543A00E4B327 /* Dish+CoreDataClass.swift */; };
 		BF591CED2B6B543A00E4B327 /* Dish+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF591CEB2B6B543A00E4B327 /* Dish+CoreDataProperties.swift */; };
+		BFAB88102B8C391F00A0EC51 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAB880F2B8C391F00A0EC51 /* Validation.swift */; };
 		BFBF61862B6DE36A0084F672 /* Karla Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFBF61852B6DE36A0084F672 /* Karla Regular.ttf */; };
 		BFBF61872B6DE3740084F672 /* MarkaziText-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFBF61832B6DDA2D0084F672 /* MarkaziText-Regular.ttf */; };
 		BFBF61882B6DE3770084F672 /* MarkaziText-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFBF61842B6DDA2D0084F672 /* MarkaziText-Medium.ttf */; };
@@ -36,6 +48,17 @@
 /* Begin PBXFileReference section */
 		BF09F9912B76D14300325BA8 /* DishDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishDetailView.swift; sourceTree = "<group>"; };
 		BF09F9972B76E97F00325BA8 /* DishListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishListView.swift; sourceTree = "<group>"; };
+		BF2662A12B8C514A00D51699 /* CartButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartButtonView.swift; sourceTree = "<group>"; };
+		BF2662A32B8C559A00D51699 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
+		BF2662A52B8CC9A100D51699 /* CartMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartMonitor.swift; sourceTree = "<group>"; };
+		BF2662A72B8CF1CF00D51699 /* OrderRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderRowView.swift; sourceTree = "<group>"; };
+		BF590DE22B8A99C2005770A7 /* LocationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsView.swift; sourceTree = "<group>"; };
+		BF590DE42B8A9A23005770A7 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		BF590DE82B8A9AA3005770A7 /* RestaurantLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantLocation.swift; sourceTree = "<group>"; };
+		BF590DF02B8A9BB0005770A7 /* RestaurantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantView.swift; sourceTree = "<group>"; };
+		BF590DF62B8A9DC6005770A7 /* Reservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reservation.swift; sourceTree = "<group>"; };
+		BF590DF82B8A9E0A005770A7 /* ReservationForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationForm.swift; sourceTree = "<group>"; };
+		BF590DFA2B8A9E36005770A7 /* ReservationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationView.swift; sourceTree = "<group>"; };
 		BF591CAB2B6AC90900E4B327 /* littleLemon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = littleLemon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF591CAE2B6AC90900E4B327 /* littleLemonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = littleLemonApp.swift; sourceTree = "<group>"; };
 		BF591CB22B6AC90B00E4B327 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -52,6 +75,7 @@
 		BF591CE82B6B530C00E4B327 /* ExampleDatabase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ExampleDatabase.xcdatamodel; sourceTree = "<group>"; };
 		BF591CEA2B6B543A00E4B327 /* Dish+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dish+CoreDataClass.swift"; sourceTree = "<group>"; };
 		BF591CEB2B6B543A00E4B327 /* Dish+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dish+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BFAB880F2B8C391F00A0EC51 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		BFBF61792B6DD0C50084F672 /* Karla Extra Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla Extra Light.ttf"; sourceTree = "<group>"; };
 		BFBF617B2B6DD0C50084F672 /* Karla Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla Bold.ttf"; sourceTree = "<group>"; };
 		BFBF617C2B6DD0C50084F672 /* Karla Extra Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla Extra Bold.ttf"; sourceTree = "<group>"; };
@@ -140,13 +164,20 @@
 			isa = PBXGroup;
 			children = (
 				BFBF61992B6E0D6F0084F672 /* HeroView.swift */,
+				BF590DF82B8A9E0A005770A7 /* ReservationForm.swift */,
 				BFBF61892B6DEB970084F672 /* NavigationHeaderView.swift */,
+				BF590DFA2B8A9E36005770A7 /* ReservationView.swift */,
 				BF591CC92B6B0DC200E4B327 /* UserProfileView.swift */,
 				BF591CC72B6B02B200E4B327 /* MenuView.swift */,
 				BF591CC32B6AF82B00E4B327 /* OnboardingView.swift */,
 				BF591CC52B6B027200E4B327 /* HomeView.swift */,
 				BF09F9912B76D14300325BA8 /* DishDetailView.swift */,
 				BF09F9972B76E97F00325BA8 /* DishListView.swift */,
+				BF590DE22B8A99C2005770A7 /* LocationsView.swift */,
+				BF590DF02B8A9BB0005770A7 /* RestaurantView.swift */,
+				BF2662A12B8C514A00D51699 /* CartButtonView.swift */,
+				BF2662A32B8C559A00D51699 /* CartView.swift */,
+				BF2662A72B8CF1CF00D51699 /* OrderRowView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -156,6 +187,11 @@
 			children = (
 				BF591CE52B6B496600E4B327 /* MenuItem.swift */,
 				BF591CE32B6B491F00E4B327 /* MenuList.swift */,
+				BF590DE42B8A9A23005770A7 /* Model.swift */,
+				BF590DE82B8A9AA3005770A7 /* RestaurantLocation.swift */,
+				BF590DF62B8A9DC6005770A7 /* Reservation.swift */,
+				BFAB880F2B8C391F00A0EC51 /* Validation.swift */,
+				BF2662A52B8CC9A100D51699 /* CartMonitor.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -252,23 +288,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF590DF92B8A9E0A005770A7 /* ReservationForm.swift in Sources */,
+				BF590DE52B8A9A23005770A7 /* Model.swift in Sources */,
 				BF591CC42B6AF82B00E4B327 /* OnboardingView.swift in Sources */,
 				BFBF619A2B6E0D6F0084F672 /* HeroView.swift in Sources */,
+				BF2662A22B8C514A00D51699 /* CartButtonView.swift in Sources */,
+				BFAB88102B8C391F00A0EC51 /* Validation.swift in Sources */,
+				BF590DE92B8A9AA3005770A7 /* RestaurantLocation.swift in Sources */,
 				BFBF619F2B6E11190084F672 /* Font+Extensions.swift in Sources */,
 				BF09F9922B76D14300325BA8 /* DishDetailView.swift in Sources */,
 				BF591CC82B6B02B200E4B327 /* MenuView.swift in Sources */,
+				BF2662A42B8C559A00D51699 /* CartView.swift in Sources */,
 				BF591CED2B6B543A00E4B327 /* Dish+CoreDataProperties.swift in Sources */,
+				BF2662A62B8CC9A100D51699 /* CartMonitor.swift in Sources */,
+				BF590DFB2B8A9E36005770A7 /* ReservationView.swift in Sources */,
 				BF591CC62B6B027200E4B327 /* HomeView.swift in Sources */,
 				BF591CBB2B6AC90B00E4B327 /* littleLemon.xcdatamodeld in Sources */,
+				BF590DF12B8A9BB0005770A7 /* RestaurantView.swift in Sources */,
 				BF591CAF2B6AC90900E4B327 /* littleLemonApp.swift in Sources */,
 				BF591CEC2B6B543A00E4B327 /* Dish+CoreDataClass.swift in Sources */,
 				BF591CCA2B6B0DC200E4B327 /* UserProfileView.swift in Sources */,
 				BFBF618A2B6DEB970084F672 /* NavigationHeaderView.swift in Sources */,
+				BF2662A82B8CF1CF00D51699 /* OrderRowView.swift in Sources */,
 				BF591CE22B6B48DF00E4B327 /* FetchedObjects.swift in Sources */,
 				BF591CE62B6B496600E4B327 /* MenuItem.swift in Sources */,
 				BF09F9982B76E97F00325BA8 /* DishListView.swift in Sources */,
 				BFBF61A02B6E11190084F672 /* Color+Extensions.swift in Sources */,
 				BF591CE12B6B48DF00E4B327 /* Persistence.swift in Sources */,
+				BF590DF72B8A9DC6005770A7 /* Reservation.swift in Sources */,
+				BF590DE32B8A99C2005770A7 /* LocationsView.swift in Sources */,
 				BF591CE42B6B491F00E4B327 /* MenuList.swift in Sources */,
 				BF591CE92B6B530C00E4B327 /* ExampleDatabase.xcdatamodeld in Sources */,
 			);
