@@ -1,4 +1,12 @@
-Description and Feature list Coming soon.
+My restaurant app offers a seamless dining experience, 
+										allowing users to Login, browse menus, customize orders, fill their carts and skip the lines with ease. 
+										Leveraging SwiftUI, PassKit, Xcode, and Core Data, I've crafted a user-friendly IOS platform 
+										that communicates with a restaurant API to provide real-time menu updates. 
+										Whether you're craving a burger with extra cheese or a salad with specific 
+										toppings, this app empowers you to personalize your order effortlessly. 
+										With streamlined navigation and accurate menu options, dining convenience has never 
+										been easier. Say hello to hassle-free online 
+										ordering and embrace a new era of culinary exploration at your fingertips.
 
 
 <img width="591" alt="Header" src="https://github.com/SpightJA/ResturantOrderingApp/assets/43256781/213b25d7-3656-4ee1-b4e2-4d45158faa1c">
